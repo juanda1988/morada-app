@@ -1,11 +1,16 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FullwidthComponent } from './fullwidth.component';
-import { LoginComponent } from 'src/app/modules/login/login.component';
+
 import { RouterModule } from '@angular/router';
-import { SharedModule } from 'src/app/shared/shared.module';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RegisterComponent } from 'src/app/modules/register/register.component';
+import { LoginComponent } from '../../modules/login/login.component';
+import { RegisterComponent } from '../../modules/register/register.component';
+import { MatCommonModule } from '@angular/material/core';
+import { RouterTestingModule } from '@angular/router/testing';
+import { SharedModule } from '../../shared/shared.module';
+
 
 
 
@@ -16,8 +21,8 @@ import { RegisterComponent } from 'src/app/modules/register/register.component';
     RegisterComponent
   ],
   imports: [
-    CommonModule,
-    RouterModule,
+    MatCommonModule,
+    RouterTestingModule,
     SharedModule,
     FormsModule,
     ReactiveFormsModule
