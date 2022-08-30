@@ -5,6 +5,7 @@ import { FullwidthComponent } from './UI/layouts/fullwidth/fullwidth.component';
 import { ContactComponent } from './UI/modules/contact/contact.component';
 import { HomeComponent } from './UI/modules/home/home.component';
 import { LoginComponent } from './UI/modules/login/login.component';
+import { PropertydetaiComponent } from './UI/modules/propertydetai/propertydetai.component';
 import { RegisterComponent } from './UI/modules/register/register.component';
 import { AuthGuard } from './UI/shared/guard/auth.guard';
 
@@ -22,6 +23,10 @@ const routes: Routes = [
     {
       path: 'contact',
       component: ContactComponent
+    },
+    {
+      path: 'propertydetai',
+      component: PropertydetaiComponent
     }]
   },
   {

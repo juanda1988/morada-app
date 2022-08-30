@@ -1,3 +1,4 @@
+import { PropertyRegistered } from "./propertyregistered";
 
 export class Property {
     title!: string;
@@ -15,9 +16,9 @@ export class Property {
 }
 
 export class PropertyResponse {
-    property!: Property;
+    property!: PropertyRegistered;
 }
 
 export class PropertiesResponse {
-    properties!: Property[];
+    properties!: PropertyRegistered[];
 }

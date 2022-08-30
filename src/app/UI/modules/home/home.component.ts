@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PropertiesResponse } from 'src/app/domain/models/Property/property';
 import { PropertyUseCase } from 'src/app/domain/usecase/propertyusecase';
 
@@ -9,7 +10,7 @@ import { PropertyUseCase } from 'src/app/domain/usecase/propertyusecase';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private _propertyUseCase: PropertyUseCase) { }
+  constructor(private _propertyUseCase: PropertyUseCase, private router: Router) { }
   response: any;
   properties!: PropertiesResponse;
   ngOnInit(): void {
@@ -22,6 +23,10 @@ export class HomeComponent implements OnInit {
           }
         }
       )
+  }
+  goToDetails(id: String){
+    //console.log(id)
+    this.router.navigate(['/default/propertydetai'],{queryParams:{id}})
   }
 
 }
